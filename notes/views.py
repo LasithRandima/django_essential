@@ -21,9 +21,9 @@ class NotesDetailView(DetailView):
     # template_name = 'notes/notes_detail.html'   # default template name is notes/notes_detail.html. so we don't need to specify it beacuse we follow the naming convention
     context_object_name = 'note'
 
-def detail(request, pk):
-    try:
-        note = Notes.objects.get(pk=pk)
-    except Notes.DoesNotExist:
-        raise Http404('Note does not exist')
-    return render(request, 'notes/notes_detail.html', {'note': note})
+# def detail(request, pk):
+#     try:
+#         note = Notes.objects.get(pk=pk)
+#     except Notes.DoesNotExist:
+#         raise Http404('Note does not exist')
+#     return render(request, 'notes/notes_detail.html', {'note': note})
